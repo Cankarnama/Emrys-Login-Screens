@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'LoginScreen_2.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -11,7 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
+        home: MyHome()
+    );
+  }
+}
+
+class MyHome extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return
+
+      Scaffold(
         body: SafeArea(
           child:
           Container(
@@ -175,14 +185,17 @@ child: Column(
                    child: const Text(
                    'Next',
                    style: TextStyle(
-                     
+
                        color: Colors.white,
                            fontSize: 16,
                    ),
 
                  ),
             //  minWidth:
-                  onPressed: (){},
+                  onPressed: (){
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen_2()));
+
+                  },
 
                  ),
 
@@ -192,6 +205,6 @@ child: Column(
         ),
       ),
 
-    ));
+    );
   }
 }
