@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'LoginScreen_4.dart';
 
 class LoginScreen_3 extends StatelessWidget {
 
@@ -28,7 +28,7 @@ class LoginScreen_3 extends StatelessWidget {
             */
             image: DecorationImage(
 
-              image: AssetImage('images/sew.png'),
+              image: AssetImage('images/tailor.png'),
               fit: BoxFit.fitWidth,
               colorFilter:
               ColorFilter.mode(
@@ -113,7 +113,7 @@ class LoginScreen_3 extends StatelessWidget {
                             height: 8,
                             width: 8,
                             decoration: new BoxDecoration(
-                              color: Colors.green[800],
+                              color: Colors.white70,
                               shape: BoxShape.circle,
 
 
@@ -123,7 +123,7 @@ class LoginScreen_3 extends StatelessWidget {
                             height: 8,
                             width: 8,
                             decoration: new BoxDecoration(
-                              color: Colors.white70,
+                              color: Colors.green[800],
                               shape: BoxShape.circle,
 
 
@@ -176,7 +176,9 @@ class LoginScreen_3 extends StatelessWidget {
 
                       ),
                       //  minWidth:
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen_4()));
+                      },
 
                     ),
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'LoginScreen_2.dart';
 
 
 class LoginScreen_5 extends StatelessWidget {
@@ -28,8 +29,8 @@ class LoginScreen_5 extends StatelessWidget {
             */
             image: DecorationImage(
 
-              image: AssetImage('images/sew.png'),
-              fit: BoxFit.fitWidth,
+              image: AssetImage('images/vegg.jpg'),
+              fit: BoxFit.cover,
               colorFilter:
               ColorFilter.mode(
                   Colors.black.withOpacity(0.5),
@@ -70,9 +71,11 @@ class LoginScreen_5 extends StatelessWidget {
                     ]),
 
                 Container(
-                  margin: EdgeInsets.only(top:330.0,bottom:6.0 ),
-                  child: const Text('Your Style, Your way',
+                  margin: EdgeInsets.only(top:285,bottom:6.0 ),
+                  child: const Text('Order groceries, beverages and essential',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
+
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 25.00,
@@ -82,7 +85,8 @@ class LoginScreen_5 extends StatelessWidget {
 
                   ),
                 ),
-                const Text('Customize you unique styles, so you can look amazing on anyday.',
+                const Text('Order you groceries online '
+                    'and get them delivered to you at your doorstep.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white54,
@@ -113,16 +117,6 @@ class LoginScreen_5 extends StatelessWidget {
                             height: 8,
                             width: 8,
                             decoration: new BoxDecoration(
-                              color: Colors.green[800],
-                              shape: BoxShape.circle,
-
-
-                            ),
-                          ),
-                          Container(
-                            height: 8,
-                            width: 8,
-                            decoration: new BoxDecoration(
                               color: Colors.white70,
                               shape: BoxShape.circle,
 
@@ -134,6 +128,16 @@ class LoginScreen_5 extends StatelessWidget {
                             width: 8,
                             decoration: new BoxDecoration(
                               color: Colors.white70,
+                              shape: BoxShape.circle,
+
+
+                            ),
+                          ),
+                          Container(
+                            height: 8,
+                            width: 8,
+                            decoration: new BoxDecoration(
+                              color:Colors.red,
                               shape: BoxShape.circle,
 
 
@@ -176,7 +180,8 @@ class LoginScreen_5 extends StatelessWidget {
 
                       ),
                       //  minWidth:
-                      onPressed: (){},
+                      onPressed: (
+                          ){Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen_2()));},
 
                     ),
 
