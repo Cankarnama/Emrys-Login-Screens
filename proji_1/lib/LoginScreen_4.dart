@@ -134,7 +134,7 @@ class LoginScreen_4 extends StatelessWidget {
                             height: 8,
                             width: 8,
                             decoration: new BoxDecoration(
-                              color:Colors.red,
+                              color:Colors.white70,
                               shape: BoxShape.circle,
 
 
@@ -144,7 +144,7 @@ class LoginScreen_4 extends StatelessWidget {
                             height: 8,
                             width: 8,
                             decoration: new BoxDecoration(
-                              color: Colors.white70,
+                              color: Colors.green[500],
                               shape: BoxShape.circle,
 
 

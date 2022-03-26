@@ -71,7 +71,7 @@ class LoginScreen_3 extends StatelessWidget {
 
                 Container(
                   margin: EdgeInsets.only(top:330.0,bottom:6.0 ),
-                  child: const Text('Your Style, Your way',
+                  child: const Text('Look good, Feel good',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -82,7 +82,7 @@ class LoginScreen_3 extends StatelessWidget {
 
                   ),
                 ),
-                const Text('Customize you unique styles, so you can look amazing on anyday.',
+                const Text('Discover the latest trends in fashion and explore your personality',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white54,
