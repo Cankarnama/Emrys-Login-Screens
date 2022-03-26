@@ -97,8 +97,8 @@ child: Column(
 
                 ),
      ),
-            const Text('Confused about which Outfits to wear ?'
-                ' Don\'t worry , find the best outfits here ',
+            const Text('Confused about which Foods to eat ?'
+                ' Don\'t worry , find the best Foods here ',
                textAlign: TextAlign.center,
                style: TextStyle(
                  color: Colors.white54,

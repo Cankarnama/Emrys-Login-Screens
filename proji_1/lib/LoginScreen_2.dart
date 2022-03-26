@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:proji_1/LoginScreen_3.dart';
 
 class LoginScreen_2 extends StatelessWidget {
 
@@ -28,7 +28,7 @@ class LoginScreen_2 extends StatelessWidget {
             */
                   image: DecorationImage(
 
-                    image: AssetImage('images/dish1.png'),
+                    image: AssetImage('images/sew.png'),
                     fit: BoxFit.fitWidth,
                     colorFilter:
                     ColorFilter.mode(
@@ -71,7 +71,7 @@ class LoginScreen_2 extends StatelessWidget {
 
                       Container(
                         margin: EdgeInsets.only(top:330.0,bottom:6.0 ),
-                        child: const Text('Hungry?',
+                        child: const Text('Your Style, Your way',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -82,8 +82,7 @@ class LoginScreen_2 extends StatelessWidget {
 
                         ),
                       ),
-                      const Text('Confused about which Foods to eat ?'
-                          ' Don\'t worry , find the best Foods here ',
+                      const Text('Customize you unique styles, so you can look amazing on anyday.',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white54,
@@ -105,7 +104,7 @@ class LoginScreen_2 extends StatelessWidget {
                                   height: 8,
                                   width: 8,
                                   decoration: new BoxDecoration(
-                                    color: Colors.red,
+                                    color: Colors.white70,
                                     shape: BoxShape.circle,
 
                                   ),
@@ -114,7 +113,7 @@ class LoginScreen_2 extends StatelessWidget {
                                   height: 8,
                                   width: 8,
                                   decoration: new BoxDecoration(
-                                    color: Colors.white70,
+                                    color: Colors.green[800],
                                     shape: BoxShape.circle,
 
 
@@ -177,7 +176,8 @@ class LoginScreen_2 extends StatelessWidget {
 
                             ),
                             //  minWidth:
-                            onPressed: (){},
+                            onPressed: (
+                                ){ Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen_3()));},
 
                           ),
 
