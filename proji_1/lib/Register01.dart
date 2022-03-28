@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flag/flag.dart';
 
 class Register01 extends StatelessWidget {
 
@@ -70,10 +71,33 @@ children:<Widget> [
         ),
       ),
     ),
-   ShortText("howdy"),
- LongText(hint:'hello every bodayy'),
-  ShortText("howdy"),
-    LongText(hint:'hello every bodayy'),
+   ShortText("Name"),
+ LongText(hint:'e.g., John Doe'),
+  ShortText("Email"),
+    LongText(hint:'e.g., name@email.com'),
+  ShortText("Phone Number"),
+
+     // FlatButton(
+Container(
+       color:Colors. blue,
+    // shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(4)),
+     color: Colors.black12,
+    Row(
+        children: <Widget>[
+         // shape: RoundedRectangleBorder(
+         //     borderRadius: BorderRadius.circular(4)),
+         // color: Colors.black12,
+        // onPressed: (){},
+          Flag.fromCode(FlagsCode.GB, height: 20, width:20 )
+          ),
+
+
+
+
+
+    ],
+  )
 
 ],
 
@@ -103,11 +127,12 @@ children:<Widget> [
 
       Widget ShortText(String shortext)=>
            Container(
-             margin: EdgeInsets.only( top :12),
+             margin: EdgeInsets.only( top :18),
              child: Row(
-children :const <Widget>[
+children : <Widget>[
 Text(
-'Name',
+   shortext,
+
 style: TextStyle(
 fontSize: 12,
 color: Colors.black,
