@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'LoginScreen_2.dart';
+import 'Register01.dart';
 
 
 class LoginScreen_5 extends StatelessWidget {
@@ -181,7 +181,7 @@ class LoginScreen_5 extends StatelessWidget {
                       ),
                       //  minWidth:
                       onPressed: (
-                          ){Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen_2()));},
+                          ){Navigator.push(context, MaterialPageRoute(builder: (context)=> Register01()));},
 
                     ),
 
