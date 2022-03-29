@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flag/flag.dart';
+import 'package:country_code_picker/country_code_picker.dart';
 
 class Register01 extends StatelessWidget {
 
@@ -76,31 +77,37 @@ children:<Widget> [
   ShortText("Email"),
     LongText(hint:'e.g., name@email.com'),
   ShortText("Phone Number"),
-
+ // LongText(hint:'e.g., name@email.com'),
+ // ShortText("Phone Number"),
      // FlatButton(
 Container(
 
-      height: ,
-      width: 20,
-      decoration:BoxDecoration(
-        border:
-        Border.all(),
-        borderRadius: BorderRadius.circular(12)
+
+      //decoration:BoxDecoration(
+       // border:
+       // Border.all(),
+       // borderRadius: BorderRadius.circular(50)
 
         //color:Colors. blue,
-      ),
+     // ),
 
     child:
     Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
          // shape: RoundedRectangleBorder(
          //     borderRadius: BorderRadius.circular(4)),
          // color: Colors.black12,
         // onPressed: (){},
-          Flag.fromCode(FlagsCode.GB, height: 10, width:10 )
+
+       CountryCodePicker(
+        initialSelection:'GB' ,
+        showCountryOnly: true,
+      ),
 
 
+
+          LongText(hint:'e.g., name@email.com'),
         ]
 
 
@@ -108,8 +115,12 @@ Container(
 
 
 
-)
 
+),
+  ShortText("Phone Number"),
+  LongText(hint:'e.g., name@email.com'),
+  ShortText("Phone Number"),
+  LongText(hint:'e.g., name@email.com'),
     ],
   )
 
