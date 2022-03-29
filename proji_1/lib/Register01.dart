@@ -79,27 +79,41 @@ children:<Widget> [
 
      // FlatButton(
 Container(
-       color:Colors. blue,
-    // shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(4)),
-     color: Colors.black12,
+
+      height: ,
+      width: 20,
+      decoration:BoxDecoration(
+        border:
+        Border.all(),
+        borderRadius: BorderRadius.circular(12)
+
+        //color:Colors. blue,
+      ),
+
+    child:
     Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
          // shape: RoundedRectangleBorder(
          //     borderRadius: BorderRadius.circular(4)),
          // color: Colors.black12,
         // onPressed: (){},
-          Flag.fromCode(FlagsCode.GB, height: 20, width:20 )
-          ),
+          Flag.fromCode(FlagsCode.GB, height: 10, width:10 )
+
+
+        ]
+
+
+    ),
 
 
 
-
+)
 
     ],
   )
 
-],
+
 
 
  )
@@ -107,7 +121,9 @@ Container(
     )
 
     ),
-  ));
+  );
+
+
   Widget LongText({required String hint}) =>
       TextField(
         textAlign: TextAlign.left,
