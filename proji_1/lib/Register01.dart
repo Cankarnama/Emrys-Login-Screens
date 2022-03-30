@@ -5,11 +5,12 @@ import 'Register02.dart';
 
 class Register01 extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => Scaffold(
+  Widget build(BuildContext context) =>
+      Scaffold(
         appBar: AppBar(
           elevation: 0,
           title: Text(
-            'STEP 1 OF 2',
+            'STEP 2 OF 2',
             style: TextStyle(color: Colors.grey[600], fontSize: 15),
           ),
           centerTitle: true,
@@ -40,7 +41,7 @@ class Register01 extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Container(
-                          margin: EdgeInsets.only(top: 20),
+                          margin: EdgeInsets.only(top:6 ),
                           child: const Text(
                             'Join the Emrys Family',
                             style: TextStyle(
@@ -86,53 +87,64 @@ class Register01 extends StatelessWidget {
                         FloatingActionButton.small(
                           child: const Icon(
                             Icons.arrow_forward,
-                                color: Colors.black12,
+                            color: Colors.black12,
 
                           ),
-                          onPressed: () { Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Register02()));},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Register02()));
+                          },
                         )
                       ],
                     )))),
       );
+  Widget LongText({required String hint}) =>
 
-  Widget LongText({required String hint}) => TextField(
+      TextField(
         textAlign: TextAlign.left,
         decoration: InputDecoration(
+          contentPadding: EdgeInsets.zero,
           hintText: hint,
+          alignLabelWithHint: true,
           hintStyle: const TextStyle(
-              //   fontWeight: FontWeight.bold
+            //   fontWeight: FontWeight.bold
               fontSize: 18),
           enabledBorder: const UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.black12),
+
+            borderSide: BorderSide(
+                width: 0,
+                color: Colors.black12),
+
           ),
-          contentPadding: const EdgeInsets.only(top: 15.0),
+          //contentPadding: const EdgeInsets.only(top: 15.0),
         ),
         textInputAction: TextInputAction.done,
       );
-}
 
-Widget ShortText(String shortext) => Container(
-      margin: EdgeInsets.only(top: 18),
-      child: Row(children: <Widget>[
-        Text(
-          shortext,
-          style: const TextStyle(
-            fontSize: 12,
-            color: Colors.black,
+
+  Widget ShortText(String shortext) =>
+      Container(
+        margin: EdgeInsets.only(top: 10),
+        child: Row(children: <Widget>[
+          Text(
+            shortext,
+            style: const TextStyle(
+              fontSize: 12,
+              color: Colors.black,
+            ),
           ),
-        ),
-        const Text(
-          '*',
-          style: TextStyle(
-            fontSize: 12,
-            color: Colors.red,
-          ),
-        )
-      ]),
-    );
+          const Text(
+            '*',
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.red,
+            ),
+          )
+        ]),
+      );
+}
 
 /*class LoginScreen_5 extends StatelessWidget {
 
