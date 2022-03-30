@@ -42,7 +42,8 @@ class LoginScreen_5 extends StatelessWidget {
                               style:
                                   TextStyle(fontSize: 18, color: Colors.white),
                             ),
-                            onPressed: () {},
+                            onPressed: () { Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => Register01()));},
                           ),
                         ]),
                     Container(
@@ -103,7 +104,7 @@ class LoginScreen_5 extends StatelessWidget {
                                 height: 8,
                                 width: 8,
                                 decoration: new BoxDecoration(
-                                  color: Colors.red,
+                                  color: Colors.white70,
                                   shape: BoxShape.circle,
                                 ),
                               ),
@@ -111,7 +112,7 @@ class LoginScreen_5 extends StatelessWidget {
                                 height: 8,
                                 width: 8,
                                 decoration: new BoxDecoration(
-                                  color: Colors.white70,
+                                  color: Colors.green[500],
                                   shape: BoxShape.circle,
                                 ),
                               ),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:proji_1/OTP.dart';
 import 'Register01.dart';
+import 'OTP.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
 
 
 class Register02 extends StatelessWidget {
@@ -14,7 +12,7 @@ class Register02 extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         title: Text(
-          'STEP 1 OF 2',
+          'STEP 2 OF 2',
           style: TextStyle(color: Colors.grey[600], fontSize: 15),
         ),
         centerTitle: true,
@@ -24,7 +22,8 @@ class Register02 extends StatelessWidget {
             Icons.arrow_back,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () { Navigator.push(context, MaterialPageRoute(
+              builder: (context) => Register01()));},
         ),
         actions: [
           IconButton(
@@ -76,9 +75,22 @@ class Register02 extends StatelessWidget {
                         Register01().ShortText('Sponsor Code'),
                         Register01().LongText(hint: 'eg.,1021921'),
                         Register01().ShortText('Placement Code'),
-                        Register01().LongText(hint: 'eg.,1021921'),
+                        dropdown(hint: 'eg.,1021921'),
                         Register01().ShortText('Placement Code'),
-                        Register01().LongText(hint: 'eg.,1021921'),
+                        dropdown(hint: 'eg.,1021921'),
+                        FloatingActionButton.small(
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            color: Colors.black12,
+
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => OTP()));
+                          },
+                        )
 
 
                         
@@ -93,7 +105,7 @@ class Register02 extends StatelessWidget {
   //   fontWeight: FontWeight.bold
   fontSize: 15),
   enabledBorder: const UnderlineInputBorder(
-  borderSide: BorderSide(color: Colors.black12),
+  borderSide: BorderSide(color: Colors.black26),
   ),
   contentPadding: const EdgeInsets.only(top: 20.0),
   suffixIcon: PopupMenuButton<String>(

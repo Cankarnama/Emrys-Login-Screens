@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flag/flag.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'Register02.dart';
+import 'LoginScreen_5.dart';
 
 class Register01 extends StatelessWidget {
   @override
@@ -20,7 +21,8 @@ class Register01 extends StatelessWidget {
               Icons.arrow_back,
               color: Colors.black,
             ),
-            onPressed: () {},
+            onPressed: () { Navigator.push(context, MaterialPageRoute(
+                builder: (context) => LoginScreen_5()));},
           ),
           actions: [
             IconButton(
@@ -78,12 +80,15 @@ class Register01 extends StatelessWidget {
                             ),
                           ]),
                         ),
+
                          ShortText("Country"),
+
+
                        Register02().dropdown(hint: 'Select your country'),
                         ShortText("Identification type (optional)"),
                         Register02().dropdown(hint: 'Select your ID type'),
                         ShortText("ID number"),
-                       // LongText(hint: 'e.g., name@email.com'),
+                       LongText(hint: 'e.g., name@email.com'),
 
 
 
@@ -117,8 +122,8 @@ class Register01 extends StatelessWidget {
           enabledBorder: const UnderlineInputBorder(
 
             borderSide: BorderSide(
-                width: 0,
-                color: Colors.black12),
+                width: 1,
+                color: Colors.black26),
 
           ),
           //contentPadding: const EdgeInsets.only(top: 15.0),
@@ -135,7 +140,7 @@ class Register01 extends StatelessWidget {
             shortext,
             style: const TextStyle(
               fontSize: 12,
-              color: Colors.black87,
+              color: Colors.black54,
             ),
           ),
           const Text(

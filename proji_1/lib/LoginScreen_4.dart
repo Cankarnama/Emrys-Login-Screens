@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'LoginScreen_5.dart';
-
+import 'Register01.dart';
 
 class LoginScreen_4 extends StatelessWidget {
 
@@ -65,7 +65,8 @@ class LoginScreen_4 extends StatelessWidget {
 
                       ),
 
-                      onPressed:(){},
+                      onPressed:(){ Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => Register01()));},
 
                     ),
                     ]),
@@ -134,7 +135,7 @@ class LoginScreen_4 extends StatelessWidget {
                             height: 8,
                             width: 8,
                             decoration: new BoxDecoration(
-                              color:Colors.white70,
+                              color:Colors.red,
                               shape: BoxShape.circle,
 
 
@@ -144,7 +145,7 @@ class LoginScreen_4 extends StatelessWidget {
                             height: 8,
                             width: 8,
                             decoration: new BoxDecoration(
-                              color: Colors.green[500],
+                              color: Colors.white70,
                               shape: BoxShape.circle,
 
 

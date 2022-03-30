@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'LoginScreen_2.dart';
+import'Register01.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -79,7 +80,8 @@ child: Column(
 
     ),
 
-    onPressed:(){},
+    onPressed:(){ Navigator.push(context, MaterialPageRoute(
+        builder: (context) => Register01()));},
 
             ),
 ]),

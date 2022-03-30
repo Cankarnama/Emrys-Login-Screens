@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proji_1/LoginScreen_3.dart';
-
+import 'Register01.dart';
 class LoginScreen_2 extends StatelessWidget {
 
 
@@ -64,8 +64,12 @@ class LoginScreen_2 extends StatelessWidget {
 
                             ),
 
-                            onPressed:(){},
+                            onPressed:() {
 
+                                Navigator.push(context, MaterialPageRoute(
+                                    builder: (context) => Register01()));
+
+                            },
                           ),
                           ]),
 
