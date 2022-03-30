@@ -37,11 +37,11 @@ class Register01 extends StatelessWidget {
             child: SafeArea(
                 child: Container(
                     color: Colors.white,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    child: ListView(
+                     // crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Container(
-                          margin: EdgeInsets.only(top:6 ),
+                          margin: EdgeInsets.only(top:15 ),
                           child: const Text(
                             'Join the Emrys Family',
                             style: TextStyle(
@@ -53,7 +53,7 @@ class Register01 extends StatelessWidget {
                         ),
 
                         Container(
-                          margin: EdgeInsets.only(top: 2),
+                          margin: EdgeInsets.only(top: 6),
                           child: Text(
                             'Please fill in a few details below',
                             style: TextStyle(
@@ -74,7 +74,7 @@ class Register01 extends StatelessWidget {
                           child: Row(children: <Widget>[
                             CountryCodePicker(
                               initialSelection: 'GB',
-                              showCountryOnly: true,
+                              showCountryOnly: false,
                             ),
                           ]),
                         ),
@@ -108,7 +108,7 @@ class Register01 extends StatelessWidget {
       TextField(
         textAlign: TextAlign.left,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.zero,
+          contentPadding: EdgeInsets.only(top: 18),
           hintText: hint,
           alignLabelWithHint: true,
           hintStyle: const TextStyle(
@@ -129,13 +129,13 @@ class Register01 extends StatelessWidget {
 
   Widget ShortText(String shortext) =>
       Container(
-        margin: EdgeInsets.only(top: 10),
+        margin: EdgeInsets.only(top: 15),
         child: Row(children: <Widget>[
           Text(
             shortext,
             style: const TextStyle(
               fontSize: 12,
-              color: Colors.black,
+              color: Colors.black87,
             ),
           ),
           const Text(

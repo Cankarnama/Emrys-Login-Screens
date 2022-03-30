@@ -41,11 +41,11 @@ class Register02 extends StatelessWidget {
           child: SafeArea(
               child: Container(
                   color: Colors.white,
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                  child: ListView(
+
                       children: <Widget>[
                         Container(
-                          margin: EdgeInsets.only(top: 6),
+                          margin: EdgeInsets.only(top: 18),
                           child: const Text(
                             'Provide Platform details',
                             style: TextStyle(
@@ -56,7 +56,7 @@ class Register02 extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 4),
+                          margin: EdgeInsets.only(top: 6),
                           child: Text(
                             'Please fill in a few details below',
                             style: TextStyle(
@@ -74,6 +74,8 @@ class Register02 extends StatelessWidget {
                         Register01().ShortText('Voucher Number'),
                         Register01().LongText(hint: 'eg.,10123123'),
                         Register01().ShortText('Sponsor Code'),
+                        Register01().LongText(hint: 'eg.,1021921'),
+                        Register01().ShortText('Placement Code'),
                         Register01().LongText(hint: 'eg.,1021921'),
                         Register01().ShortText('Placement Code'),
                         Register01().LongText(hint: 'eg.,1021921'),
