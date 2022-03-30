@@ -45,7 +45,7 @@ class Register02 extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Container(
-                          margin: EdgeInsets.only(top: 20),
+                          margin: EdgeInsets.only(top: 6),
                           child: const Text(
                             'Provide Platform details',
                             style: TextStyle(
@@ -56,7 +56,7 @@ class Register02 extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 6),
+                          margin: EdgeInsets.only(top: 4),
                           child: Text(
                             'Please fill in a few details below',
                             style: TextStyle(
@@ -89,7 +89,7 @@ class Register02 extends StatelessWidget {
   hintText: hint,
   hintStyle: const TextStyle(
   //   fontWeight: FontWeight.bold
-  fontSize: 18),
+  fontSize: 15),
   enabledBorder: const UnderlineInputBorder(
   borderSide: BorderSide(color: Colors.black12),
   ),

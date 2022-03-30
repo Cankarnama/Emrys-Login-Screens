@@ -10,7 +10,7 @@ class Register01 extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           title: Text(
-            'STEP 2 OF 2',
+            'STEP 1 OF 2',
             style: TextStyle(color: Colors.grey[600], fontSize: 15),
           ),
           centerTitle: true,
@@ -53,7 +53,7 @@ class Register01 extends StatelessWidget {
                         ),
 
                         Container(
-                          margin: EdgeInsets.only(top: 6),
+                          margin: EdgeInsets.only(top: 2),
                           child: Text(
                             'Please fill in a few details below',
                             style: TextStyle(
@@ -78,12 +78,15 @@ class Register01 extends StatelessWidget {
                             ),
                           ]),
                         ),
-                        /*  ShortText("Phone Number"),
-                        LongText(hint: 'e.g., name@email.com'),
-                        ShortText("Phone Number"),
-                        LongText(hint: 'e.g., name@email.com'),
+                         ShortText("Country"),
+                       Register02().dropdown(hint: 'Select your country'),
+                        ShortText("Identification type (optional)"),
+                        Register02().dropdown(hint: 'Select your ID type'),
+                        ShortText("ID number"),
+                       // LongText(hint: 'e.g., name@email.com'),
 
-                       */
+
+
                         FloatingActionButton.small(
                           child: const Icon(
                             Icons.arrow_forward,
@@ -110,7 +113,7 @@ class Register01 extends StatelessWidget {
           alignLabelWithHint: true,
           hintStyle: const TextStyle(
             //   fontWeight: FontWeight.bold
-              fontSize: 18),
+              fontSize: 15),
           enabledBorder: const UnderlineInputBorder(
 
             borderSide: BorderSide(
