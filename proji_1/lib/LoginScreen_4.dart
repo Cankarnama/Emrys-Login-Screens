@@ -118,8 +118,14 @@ class LoginScreen_4 extends StatelessWidget {
                               color: Colors.white70,
                               shape: BoxShape.circle,
 
-
                             ),
+                            child: FlatButton(
+
+
+                              onPressed:(){ Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => Register01()));} ,
+                            child: Text('.')),
+
                           ),
                           Container(
                             height: 8,

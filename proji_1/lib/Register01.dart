@@ -93,6 +93,7 @@ class Register01 extends StatelessWidget {
 
 
                         FloatingActionButton.small(
+
                           child: const Icon(
                             Icons.arrow_forward,
                             color: Colors.black12,
@@ -104,10 +105,11 @@ class Register01 extends StatelessWidget {
                                 MaterialPageRoute(
                                     builder: (context) => Register02()));
                           },
+
                         )
                       ],
                     )))),
-      );
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,);
   Widget LongText({required String hint}) =>
 
       TextField(
