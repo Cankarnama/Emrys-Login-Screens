@@ -4,7 +4,7 @@ import 'Register01.dart';
 import 'OTP.dart';
 
 class Register02 extends StatelessWidget {
-  var items = ['Working a lot harder', 'Being a lot smarter'];
+  var items = ['empty'];
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
@@ -51,6 +51,20 @@ class Register02 extends StatelessWidget {
           )
         ],
       ),
+      floatingActionButton:  FloatingActionButton.small(
+        backgroundColor: Colors.grey,
+        child: const Icon(
+          Icons.arrow_forward,
+          color: Colors.white
+        ),
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => OTP()));
+
+        },
+      ),
+
+
       body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18),
           child: SafeArea(
@@ -78,7 +92,7 @@ class Register02 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Register01().ShortText('package'),
+                    Register01().ShortText2('package'),
                     dropdown(hint: 'Select your packages'),
                     Register01().ShortText('Region'),
                     Register01().LongText(hint: 'eg.,Accra'),
@@ -90,9 +104,8 @@ class Register02 extends StatelessWidget {
                     Register01().LongText(hint: 'eg.,1021921'),
                     Register01().ShortText('Placement Code'),
                     dropdown(hint: 'eg.,1021921'),
-                    Register01().ShortText('Placement Code'),
-                    dropdown(hint: 'eg.,1021921'),
-                    FloatingActionButton.small(
+
+                  /*loatingActionButton.small(
                       child: const Icon(
                         Icons.arrow_forward,
                         color: Colors.black12,
@@ -100,14 +113,15 @@ class Register02 extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => OTP()));
+
                       },
-                    )
+*/
                   ])))),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat);
+   );
 
 
 
-  
+
   Widget dropdown({required String hint}) => TextField(
         decoration: InputDecoration(
           hintText: hint,

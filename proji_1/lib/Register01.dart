@@ -3,6 +3,7 @@ import 'package:flag/flag.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'Register02.dart';
 import 'LoginScreen_5.dart';
+import 'OTP.dart';
 
 class Register01 extends StatelessWidget {
   @override
@@ -48,6 +49,18 @@ class Register01 extends StatelessWidget {
               },
             )
           ],
+        ),
+        floatingActionButton:  FloatingActionButton.small(
+          backgroundColor: Colors.grey,
+          child: const Icon(
+              Icons.arrow_forward,
+              color: Colors.white
+          ),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => OTP()));
+
+          },
         ),
         body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 18),
@@ -122,31 +135,17 @@ class Register01 extends StatelessWidget {
 
 
                        Register02().dropdown(hint: 'Select your country'),
-                        ShortText("Identification type (optional)"),
+                        ShortText2("Identification type (optional)"),
                         Register02().dropdown(hint: 'Select your ID type'),
-                        ShortText("ID number"),
+                        ShortText2("ID number"),
                        LongText(hint: 'e.g., name@email.com'),
 
 
 
-                        FloatingActionButton.small(
 
-                          child: const Icon(
-                            Icons.arrow_forward,
-                            color: Colors.black12,
-
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Register02()));
-                          },
-
-                        )
                       ],
                     )))),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,);
+        );
   Widget LongText({required String hint}) =>
 
       TextField(
@@ -172,6 +171,26 @@ class Register01 extends StatelessWidget {
 
 
   Widget ShortText(String shortext) =>
+    Container(
+      margin: EdgeInsets.only(top: 15),
+      child: Row(children: <Widget>[
+        Text(
+          shortext,
+          style: const TextStyle(
+            fontSize: 12,
+            color: Colors.black54,
+          ),
+        ),
+        const Text(
+          '*',
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.red,
+          ),
+        )
+      ]),
+    );
+  Widget ShortText2(String shortext) =>
       Container(
         margin: EdgeInsets.only(top: 15),
         child: Row(children: <Widget>[
@@ -182,16 +201,11 @@ class Register01 extends StatelessWidget {
               color: Colors.black54,
             ),
           ),
-          const Text(
-            '*',
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.red,
-            ),
-          )
+
         ]),
       );
 }
+
 
 /*class LoginScreen_5 extends StatelessWidget {
 
