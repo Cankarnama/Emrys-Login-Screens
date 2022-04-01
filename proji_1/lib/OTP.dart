@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flag/flag.dart';
-import 'package:country_code_picker/country_code_picker.dart';
+
 import 'Register02.dart';
-import 'LoginScreen_2.dart';
+import 'LoginScreen_1.dart';
 
 class OTP extends StatelessWidget {
   @override
@@ -144,11 +143,7 @@ class OTP extends StatelessWidget {
 
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => OTP()));
-                                  },
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen_1()));},
                                 ),
                               ],
                             ),

@@ -1,8 +1,12 @@
 
 import 'package:flutter/material.dart';
-import 'LoginScreen_2.dart';
-import'Register01.dart';
 import 'LoginScreen_1.dart';
+import 'LoginScreen_2.dart';
+import 'LoginScreen_3.dart';
+import 'LoginScreen_4.dart';
+import 'LoginScreen_5.dart';
+import'Register01.dart';
+
 
 class LoginScreen_1 extends StatelessWidget {
   @override
@@ -113,6 +117,7 @@ class LoginScreen_1 extends StatelessWidget {
                                   shape: BoxShape.circle,
 
                                 ),
+                                child: LoginScreen_4().navipress(context, LoginScreen_1()),
                               ),
                               Container(
                                 height: 8,
@@ -123,6 +128,7 @@ class LoginScreen_1 extends StatelessWidget {
 
 
                                 ),
+                                child: LoginScreen_4().navipress(context, LoginScreen_2()),
                               ),
                               Container(
                                 height: 8,
@@ -133,6 +139,7 @@ class LoginScreen_1 extends StatelessWidget {
 
 
                                 ),
+                                child: LoginScreen_4().navipress(context, LoginScreen_3()),
                               ),
                               Container(
                                 height: 8,
@@ -143,6 +150,7 @@ class LoginScreen_1 extends StatelessWidget {
 
 
                                 ),
+                                child: LoginScreen_4().navipress(context, LoginScreen_4()),
                               ),
                               Container(
                                 height: 8,
@@ -153,6 +161,7 @@ class LoginScreen_1 extends StatelessWidget {
 
 
                                 ),
+                                child: LoginScreen_4().navipress(context, LoginScreen_5()),
                               ),
 
                             ]
@@ -195,5 +204,7 @@ class LoginScreen_1 extends StatelessWidget {
         ),
 
       );
+
   }
+
 }

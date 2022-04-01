@@ -1,4 +1,11 @@
+
+
 import 'package:flutter/material.dart';
+import 'package:proji_1/LoginScreen_1.dart';
+import 'LoginScreen_1.dart';
+import 'LoginScreen_2.dart';
+import 'LoginScreen_3.dart';
+import 'LoginScreen_4.dart';
 import 'LoginScreen_5.dart';
 import 'Register01.dart';
 
@@ -108,8 +115,8 @@ class LoginScreen_4 extends StatelessWidget {
                             decoration: new BoxDecoration(
                               color: Colors.white70,
                               shape: BoxShape.circle,
-
                             ),
+                            child: navipress(context, LoginScreen_1()),
                           ),
                           Container(
                             height: 8,
@@ -119,12 +126,7 @@ class LoginScreen_4 extends StatelessWidget {
                               shape: BoxShape.circle,
 
                             ),
-                            child: FlatButton(
-
-
-                              onPressed:(){ Navigator.push(context, MaterialPageRoute(
-                                builder: (context) => Register01()));} ,
-                            child: Text('.')),
+                              child: navipress(context, LoginScreen_2()),
 
                           ),
                           Container(
@@ -133,9 +135,8 @@ class LoginScreen_4 extends StatelessWidget {
                             decoration: new BoxDecoration(
                               color: Colors.white70,
                               shape: BoxShape.circle,
-
-
                             ),
+                            child: navipress(context, LoginScreen_3()),
                           ),
                           Container(
                             height: 8,
@@ -143,9 +144,8 @@ class LoginScreen_4 extends StatelessWidget {
                             decoration: new BoxDecoration(
                               color:Colors.red,
                               shape: BoxShape.circle,
-
-
                             ),
+                            child: navipress(context, LoginScreen_4()),
                           ),
                           Container(
                             height: 8,
@@ -156,6 +156,7 @@ class LoginScreen_4 extends StatelessWidget {
 
 
                             ),
+                            child: navipress(context, LoginScreen_5()),
                           ),
 
                         ]
@@ -196,5 +197,11 @@ class LoginScreen_4 extends StatelessWidget {
     ),
 
   );
+  Widget navipress(BuildContext context, Widget screen) =>
+      FlatButton(
+          onPressed:(){ Navigator.push(context, MaterialPageRoute(
+              builder: (context) => screen));} ,
+          child: Text('.'));
+
 }
 
