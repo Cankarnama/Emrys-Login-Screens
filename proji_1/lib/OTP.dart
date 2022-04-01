@@ -110,9 +110,32 @@ class OTP extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
 
-                              mainAxisAlignment: MainAxisAlignment.end,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+
+
+                                Flexible(
+                                  child: Container(
+                                   //padding: EdgeInsets.only(top: 20),
+                               //   height: ,
+                                    child: TextField(
+                                      style: TextStyle(
+                                        fontSize: 28,
+                                        letterSpacing: 5,
+
+                                      ) ,
+                                    textAlign: TextAlign.center,
+                                    decoration: const InputDecoration(
+
+                                          contentPadding: EdgeInsets.only(top: 18),
+                                      hintText: '4450',
+
+                                      alignLabelWithHint: true,
+                                    )
+                                    ),
+                                  ),
+                                ),
                                 FloatingActionButton.small(
                                   backgroundColor: Colors. green,
                                   child: const Icon(
@@ -144,22 +167,6 @@ class OTP extends StatelessWidget {
 
                             height: 300,
                             color: Colors.amber,
-                            child: Center(
-                              child:
-                              GridView.count(crossAxisCount: 3,
-                              crossAxisSpacing: 5,
-                                mainAxisSpacing: 5,
-                                children: [
-                                  FlatButton(onPressed: (){}, child: Text('dhf')),
-                                  FlatButton(onPressed: (){}, child: Text('dhf')),
-                                  FlatButton(onPressed: (){}, child: Text('dhf')),
-                                  FlatButton(onPressed: (){}, child: Text('dhf')),
-                                  FlatButton(onPressed: (){}, child: Text('dhf')),
-                                  FlatButton(onPressed: (){}, child: Text('dhf')),
-                                  FlatButton(onPressed: (){}, child: Text('dhf')),
-                                ],
-                            )
-                            ),
 
 
 

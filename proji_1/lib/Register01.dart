@@ -78,6 +78,28 @@ class Register01 extends StatelessWidget {
                               initialSelection: 'GB',
                               showCountryOnly: false,
                             ),
+
+
+                            Flexible(
+                              child: Container(
+                                //padding: EdgeInsets.only(top: 20),
+
+                                //   height: ,
+                                child: const TextField(
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      //letterSpacing: 5,
+
+                                    ) ,
+                                    textAlign: TextAlign.left,
+                                    decoration: InputDecoration(
+                                      hintText: '123xxxxxxxx',
+
+                                      alignLabelWithHint: true,
+                                    )
+                                ),
+                              ),
+                            ),
                           ]),
                         ),
 
