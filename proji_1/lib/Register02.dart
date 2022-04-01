@@ -31,7 +31,23 @@ class Register02 extends StatelessWidget {
               Icons.error,
               color: Colors.black,
             ),
-            onPressed: () {},
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (ctx) => AlertDialog(
+                  title: Text("Alert Dialog Box"),
+                  content: Text("Please make sure to fill all text fields"),
+                  actions: <Widget>[
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.of(ctx).pop();
+                      },
+                      child: Text("okay"),
+                    ),
+                  ],
+                ),
+              );
+            },
           )
         ],
       ),
@@ -86,7 +102,12 @@ class Register02 extends StatelessWidget {
                             MaterialPageRoute(builder: (context) => OTP()));
                       },
                     )
-                  ])))),floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat);
+                  ])))),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat);
+
+
+
+  
   Widget dropdown({required String hint}) => TextField(
         decoration: InputDecoration(
           hintText: hint,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proji_1/Register01.dart';
 
 import 'Register02.dart';
 import 'LoginScreen_1.dart';
@@ -26,7 +27,24 @@ class OTP extends StatelessWidget {
                   Icons.error,
                   color: Colors.black,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                   showDialog(
+                    context: context,
+                    builder: (ctx) => AlertDialog(
+                      title: Text("Alert Dialog Box"),
+                      content: Text("Type in the exact number sent via sms"),
+                      actions: <Widget>[
+                        FlatButton(
+                          onPressed: () {
+                            Navigator.of(ctx).pop();
+                          },
+                          child: Text("okay"),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+
               )
             ],
           ),
@@ -70,6 +88,7 @@ class OTP extends StatelessWidget {
                               ),
                             ),
                           ),
+                             Register01().ShortText( 'OTP'),
                           Container(
                             margin: EdgeInsets.only(top:20)
                             ,
@@ -77,6 +96,7 @@ class OTP extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children:  [
+
                                 const Text(
                                   '4450 ',
                                   style: TextStyle(
